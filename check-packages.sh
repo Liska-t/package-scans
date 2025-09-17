@@ -2,8 +2,9 @@
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PKG_FILE="${1:-$SCRIPT_DIR/packages.txt}"
+repo_name="$(basename "$(pwd)")"
 
-echo "Checking for listed packages from: $PKG_FILE"
+echo "Checking for listed packages from: $PKG_FILE in $repo_name"
 echo "------------------------------------------------"
 
 if [ ! -f "$PKG_FILE" ]; then
